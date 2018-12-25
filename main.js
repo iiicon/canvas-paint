@@ -3,6 +3,9 @@ var ctx = canvas.getContext('2d')
 var eraserEnabled = false
 var colorStyle = 'black'
 
+setCanvasSize(canvas)
+listenToMouse(canvas)
+
 eraser.onclick = function() {
   eraserEnabled = true
 }
@@ -31,9 +34,6 @@ save.onclick = function() {
   a.download = 'paint'
   a.click()
 }
-
-setCanvasSize(canvas)
-listenToMouse(canvas)
 
 function drawCircle(x, y, r) {
   ctx.beginPath()
