@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ol,li {
+      list-style: none;
+    }
+    body {
+      position: relative;
+      margin: 0;
+      /* border: 1px solid black; */
+    }
+    #canvas {
+      display: block;
+      background: salmon;
+    }
+    .icon {
+       width: 2em; height: 2em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+    .tool {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+    }
+    button {
+      margin: 0 10px;
+    }
+    
+    .colors {
+      position: fixed;
+      top: 50px;
+      left: 20px;
+    }
+
+    .colors li {
+      width: 20px;
+      margin: 10px 0;
+      height: 20px;
+      border-radius: 10px;
+      border: 3px splid transparent;
+    }
+    .colors li.active {
+      border: 3px splid white;
+    }
+    .red {
+      background: red;
+    }
+    .yellow {
+      background: yellow;
+    }
+    .blue {
+      background: blue;
+    }
+
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="500px" height="500"></canvas>
+  <div class="tool">
+    <button id="eraser">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-Eraser-Tool"></use>
+      </svg>
+    </button>
+    <button id="pen">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-pen"></use>
+      </svg>
+    </button>
+    <button id="save"">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-download"></use>
+      </svg>
+    </button>
+  </div>
+  <ol class="colors">
+   <li id="red" class="red active"></li>
+  <li id="yellow" class="yellow"></li>
+   <li id="blue" class="blue"></li>
+  </ol>
+</body>
+<script src="./main.js"></script>
+<script src="//at.alicdn.com/t/font_984416_bw5kkovt8r7.js"></script>
+</html>

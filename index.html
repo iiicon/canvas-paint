@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #canvas {
+        position: relative;
+        height: 100vh;
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas"></div>
+  </body>
+  <script>
+    // var div = document.getElementById('canvas')
+    // document.onmousedown = function(e) {
+    //   var x = e.clientX
+    //   var y = e.clientY
+    //   var diva = document.createElement('div')
+    //   diva.style = "width:6px; height:6px; border-radius: 100%; position:absolute; top: "+(y-3)+"px; left: "+(x-3)+"px;background:black"
+    //   div.appendChild(diva)
+    // }
+
+    // document.onmousemove = function(e) {
+
+    // }
+
+    // document.onmouseup = function(e) {
+
+    // }
+    document.body.ontouchstart = function(e) {
+      console.log(e)
+    }
+    document.body.onmousedown = function(e) {
+      console.log(e)
+    }
+  </script>
+</html>
